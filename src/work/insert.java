@@ -3,7 +3,839 @@ package work;
 public class insert {
 	
 	public static void main(String[] args) {
+		bjg();
 		
+		
+	}
+	public static void sjcf_delete_insert() {
+
+		String sql="";
+		String tablesname="eastic_bbxrbmaliang" + 
+				"eastic_bdtsxxbmaliang" + 
+				"eastic_bdxsryglbmaliang" + 
+				"eastic_bdyjxxbmaliang" + 
+				"eastic_bfmxbmaliang" + 
+				"eastic_cwpzxxbmaliang" + 
+				"eastic_cxrxxbmaliang" + 
+				"eastic_djglzxxbmaliang" + 
+				"eastic_ffmxbmaliang" + 
+				"eastic_fzjgxxbmaliang" + 
+				"eastic_glfxxbmaliang" + 
+				"eastic_gljyhzbmaliang" + 
+				"eastic_grbdbmaliang" + 
+				"eastic_grkhxxbmaliang" + 
+				"eastic_grxzbmaliang" + 
+				"eastic_jggqxxbmaliang" + 
+				"eastic_khbddzbmaliang" + 
+				"eastic_khhfbmaliang" + 
+				"eastic_lpbdmxbmaliang" + 
+				"eastic_nbkmdzbmaliang" + 
+				"eastic_njjhglqkbmaliang" + 
+				"eastic_njjhxxbmaliang" + 
+				"eastic_njjhyymxbmaliang" + 
+				"eastic_njtzqkbmaliang" + 
+				"eastic_sxfjyjfkmmxzbmaliang" + 
+				"eastic_ttbdbmaliang" + 
+				"eastic_ttbfbmaliang" + 
+				"eastic_ttkhxxbmaliang" + 
+				"eastic_ttxzbmaliang" + 
+				"eastic_wttzqkbmaliang" + 
+				"eastic_xsryxxbmaliang" + 
+				"eastic_xzdybmaliang" + 
+				"eastic_ygxxbmaliang" + 
+				"eastic_yhzhxxbmaliang" + 
+				"eastic_ylbzcpxxqkbmaliang" + 
+				"eastic_ylbzywxxbmaliang" + 
+				"eastic_ywjglffkmmxzbmaliang" + 
+				"eastic_zbcpxxbmaliang" + 
+				"eastic_zbhtxxbmaliang" + 
+				"eastic_zbzdxxbmaliang" + 
+				"eastic_zdgljybmaliang" + 
+				"eastic_zjjgxxbmaliang" + 
+				"eastic_zzkjqkmbmaliang" + 
+				"eastic_zztzjylsbmaliang" + 
+				"eastic_zztzzhccmxbmaliang" + 
+				"eastic_zztzzhxxhzb";
+		String[] arrtable=tablesname.split("maliang");
+		for(int i=0;i<arrtable.length;i++) {
+			sql=sql+"delete from "+arrtable[i]+" where DIS_STEP_ID = 'ETL_SJCF';\r\n";
+		}
+		System.out.print(sql);
+	}
+	
+	public static void sjcf_insert() {
+		String sql = "";
+		String tablescloumns = "eastic_bbxrb	maliang	LSH	maliang" + 
+				"eastic_bbxrb	maliang	BXJGDM	maliang" + 
+				"eastic_bbxrb	maliang	BXJGMC	maliang" + 
+				"eastic_bbxrb	maliang	TTBDH	maliang" + 
+				"eastic_bbxrb	maliang	BDTGXZ	maliang" + 
+				"eastic_bbxrb	maliang	GRBDH	maliang" + 
+				"eastic_bbxrb	maliang	BBRKHBH	maliang" + 
+				"eastic_bbxrb	maliang	GLJGDM	maliang" + 
+				"eastic_bbxrb	maliang	GLJGMC	maliang" + 
+				"eastic_bbxrb	maliang	YZBBRGX	maliang" + 
+				"eastic_bbxrb	maliang	ZBBRKHH	maliang" + 
+				"eastic_bbxrb	maliang	YTBRGX	maliang" + 
+				"eastic_bbxrb	maliang	ZY	maliang" + 
+				"eastic_bbxrb	maliang	BBXRLX	maliang" + 
+				"eastic_bbxrb	maliang	BBXRZT	maliang" + 
+				"eastic_bbxrb	maliang	DIS_USER	maliang" + 
+				"eastic_bbxrb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_bbxrb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_bbxrb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_bbxrb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_bbxrb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_bbxrb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_bbxrb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_bdtsxxb	maliang	LSH	maliang" + 
+				"eastic_bdtsxxb	maliang	BXJGDM	maliang" + 
+				"eastic_bdtsxxb	maliang	BXJGMC	maliang" + 
+				"eastic_bdtsxxb	maliang	TTBDH	maliang" + 
+				"eastic_bdtsxxb	maliang	GRBDH	maliang" + 
+				"eastic_bdtsxxb	maliang	TSRXM	maliang" + 
+				"eastic_bdtsxxb	maliang	TSLX	maliang" + 
+				"eastic_bdtsxxb	maliang	TSYY	maliang" + 
+				"eastic_bdtsxxb	maliang	TSRQ	maliang" + 
+				"eastic_bdtsxxb	maliang	TSYXBZ	maliang" + 
+				"eastic_bdtsxxb	maliang	TSCLKSSJ	maliang" + 
+				"eastic_bdtsxxb	maliang	TSCLJSSJ	maliang" + 
+				"eastic_bdtsxxb	maliang	TSCLJG	maliang" + 
+				"eastic_bdtsxxb	maliang	TSWXYY	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_USER	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_bdtsxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_bdxsryglb	maliang	LSH	maliang" + 
+				"eastic_bdxsryglb	maliang	BXJGDM	maliang" + 
+				"eastic_bdxsryglb	maliang	BXJGMC	maliang" + 
+				"eastic_bdxsryglb	maliang	XSRYDM	maliang" + 
+				"eastic_bdxsryglb	maliang	XSRYXM	maliang" + 
+				"eastic_bdxsryglb	maliang	YYXSRYDM	maliang" + 
+				"eastic_bdxsryglb	maliang	YYXSRYXM	maliang" + 
+				"eastic_bdxsryglb	maliang	TTBDH	maliang" + 
+				"eastic_bdxsryglb	maliang	BDTGXZ	maliang" + 
+				"eastic_bdxsryglb	maliang	GRBDH	maliang" + 
+				"eastic_bdxsryglb	maliang	GLJGDM	maliang" + 
+				"eastic_bdxsryglb	maliang	GLJGMC	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_USER	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_bdxsryglb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_bdyjxxb	maliang	LSH	maliang" + 
+				"eastic_bdyjxxb	maliang	BXJGDM	maliang" + 
+				"eastic_bdyjxxb	maliang	BXJGMC	maliang" + 
+				"eastic_bdyjxxb	maliang	TTBDH	maliang" + 
+				"eastic_bdyjxxb	maliang	TTBDXZHM	maliang" + 
+				"eastic_bdyjxxb	maliang	GRBDH	maliang" + 
+				"eastic_bdyjxxb	maliang	GDBXXZHM	maliang" + 
+				"eastic_bdyjxxb	maliang	BDTGXZ	maliang" + 
+				"eastic_bdyjxxb	maliang	CPBM	maliang" + 
+				"eastic_bdyjxxb	maliang	YWLX	maliang" + 
+				"eastic_bdyjxxb	maliang	FYXH	maliang" + 
+				"eastic_bdyjxxb	maliang	HBDM	maliang" + 
+				"eastic_bdyjxxb	maliang	YJSXFBL	maliang" + 
+				"eastic_bdyjxxb	maliang	YJSXFJE	maliang" + 
+				"eastic_bdyjxxb	maliang	CWQRRQ	maliang" + 
+				"eastic_bdyjxxb	maliang	SJDZRQ	maliang" + 
+				"eastic_bdyjxxb	maliang	KHYXMC	maliang" + 
+				"eastic_bdyjxxb	maliang	YXZH	maliang" + 
+				"eastic_bdyjxxb	maliang	YXZHMC	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_USER	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_bdyjxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_bfmxb	maliang	LSH	maliang" + 
+				"eastic_bfmxb	maliang	BXJGDM	maliang" + 
+				"eastic_bfmxb	maliang	BXJGMC	maliang" + 
+				"eastic_bfmxb	maliang	TTBDH	maliang" + 
+				"eastic_bfmxb	maliang	GRBDH	maliang" + 
+				"eastic_bfmxb	maliang	BDTGXZ	maliang" + 
+				"eastic_bfmxb	maliang	BFYWLX	maliang" + 
+				"eastic_bfmxb	maliang	JFXH	maliang" + 
+				"eastic_bfmxb	maliang	GDBXXZHM	maliang" + 
+				"eastic_bfmxb	maliang	CPBM	maliang" + 
+				"eastic_bfmxb	maliang	GLJGDM	maliang" + 
+				"eastic_bfmxb	maliang	GLJGMC	maliang" + 
+				"eastic_bfmxb	maliang	SJJE	maliang" + 
+				"eastic_bfmxb	maliang	DZRQ	maliang" + 
+				"eastic_bfmxb	maliang	QRRQ	maliang" + 
+				"eastic_bfmxb	maliang	KHYXMC	maliang" + 
+				"eastic_bfmxb	maliang	YXZH	maliang" + 
+				"eastic_bfmxb	maliang	YXZHMC	maliang" + 
+				"eastic_bfmxb	maliang	DIS_USER	maliang" + 
+				"eastic_bfmxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_bfmxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_bfmxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_bfmxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_bfmxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_bfmxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_bfmxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_cwpzxxb	maliang	LSH	maliang" + 
+				"eastic_cwpzxxb	maliang	BXJGDM	maliang" + 
+				"eastic_cwpzxxb	maliang	BXJGMC	maliang" + 
+				"eastic_cwpzxxb	maliang	BXZTBM	maliang" + 
+				"eastic_cwpzxxb	maliang	BXZTMC	maliang" + 
+				"eastic_cwpzxxb	maliang	FZJGDM	maliang" + 
+				"eastic_cwpzxxb	maliang	GSQJ	maliang" + 
+				"eastic_cwpzxxb	maliang	JZRQ	maliang" + 
+				"eastic_cwpzxxb	maliang	JZPZH	maliang" + 
+				"eastic_cwpzxxb	maliang	ZZKJKMBH	maliang" + 
+				"eastic_cwpzxxb	maliang	ZZKJKMMC	maliang" + 
+				"eastic_cwpzxxb	maliang	PZLY	maliang" + 
+				"eastic_cwpzxxb	maliang	ZY	maliang" + 
+				"eastic_cwpzxxb	maliang	HBDM	maliang" + 
+				"eastic_cwpzxxb	maliang	JYBJF	maliang" + 
+				"eastic_cwpzxxb	maliang	JYBDF	maliang" + 
+				"eastic_cwpzxxb	maliang	BWBJF	maliang" + 
+				"eastic_cwpzxxb	maliang	BWBDF	maliang" + 
+				"eastic_cwpzxxb	maliang	YWXTCPBM	maliang" + 
+				"eastic_cwpzxxb	maliang	CWXTCPBM	maliang" + 
+				"eastic_cwpzxxb	maliang	JFFSMC	maliang" + 
+				"eastic_cwpzxxb	maliang	QDMC	maliang" + 
+				"eastic_cwpzxxb	maliang	TJFXZ	maliang" + 
+				"eastic_cwpzxxb	maliang	TJCPSJLX	maliang" + 
+				"eastic_cwpzxxb	maliang	TJJFFS	maliang" + 
+				"eastic_cwpzxxb	maliang	TJQD	maliang" + 
+				"eastic_cwpzxxb	maliang	PCH	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_USER	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_cwpzxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_cxrxxb	maliang	LSH	maliang" + 
+				"eastic_cxrxxb	maliang	BXJGDM	maliang" + 
+				"eastic_cxrxxb	maliang	BXJGMC	maliang" + 
+				"eastic_cxrxxb	maliang	BAH	maliang" + 
+				"eastic_cxrxxb	maliang	LAH	maliang" + 
+				"eastic_cxrxxb	maliang	PAH	maliang" + 
+				"eastic_cxrxxb	maliang	CXRKHBH	maliang" + 
+				"eastic_cxrxxb	maliang	CXRXM	maliang" + 
+				"eastic_cxrxxb	maliang	CXRXB	maliang" + 
+				"eastic_cxrxxb	maliang	CXRCSRQ	maliang" + 
+				"eastic_cxrxxb	maliang	CXRZJLX	maliang" + 
+				"eastic_cxrxxb	maliang	CXRZJHM	maliang" + 
+				"eastic_cxrxxb	maliang	SWBZ	maliang" + 
+				"eastic_cxrxxb	maliang	SWRQ	maliang" + 
+				"eastic_cxrxxb	maliang	SWYY	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_USER	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_cxrxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_djglzxxb	maliang	LSH	maliang" + 
+				"eastic_djglzxxb	maliang	BXJGDM	maliang" + 
+				"eastic_djglzxxb	maliang	BXJGMC	maliang" + 
+				"eastic_djglzxxb	maliang	YGDM	maliang" + 
+				"eastic_djglzxxb	maliang	SSFZJGDM	maliang" + 
+				"eastic_djglzxxb	maliang	XXLB	maliang" + 
+				"eastic_djglzxxb	maliang	KSRQ	maliang" + 
+				"eastic_djglzxxb	maliang	JSRQ	maliang" + 
+				"eastic_djglzxxb	maliang	PFRQ	maliang" + 
+				"eastic_djglzxxb	maliang	SRZW	maliang" + 
+				"eastic_djglzxxb	maliang	CFJG	maliang" + 
+				"eastic_djglzxxb	maliang	CFZL	maliang" + 
+				"eastic_djglzxxb	maliang	CFYY	maliang" + 
+				"eastic_djglzxxb	maliang	CFJE	maliang" + 
+				"eastic_djglzxxb	maliang	GWRZXX	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_USER	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_djglzxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_ffmxb	maliang	LSH	maliang" + 
+				"eastic_ffmxb	maliang	BXJGDM	maliang" + 
+				"eastic_ffmxb	maliang	BXJGMC	maliang" + 
+				"eastic_ffmxb	maliang	TTBDH	maliang" + 
+				"eastic_ffmxb	maliang	GRBDH	maliang" + 
+				"eastic_ffmxb	maliang	BDTGXZ	maliang" + 
+				"eastic_ffmxb	maliang	GDBXXZHM	maliang" + 
+				"eastic_ffmxb	maliang	CPBM	maliang" + 
+				"eastic_ffmxb	maliang	SFHM	maliang" + 
+				"eastic_ffmxb	maliang	FFLX	maliang" + 
+				"eastic_ffmxb	maliang	FFFS	maliang" + 
+				"eastic_ffmxb	maliang	SFJE	maliang" + 
+				"eastic_ffmxb	maliang	DZRQ	maliang" + 
+				"eastic_ffmxb	maliang	QRRQ	maliang" + 
+				"eastic_ffmxb	maliang	YXMC	maliang" + 
+				"eastic_ffmxb	maliang	YXZH	maliang" + 
+				"eastic_ffmxb	maliang	YXZHMC	maliang" + 
+				"eastic_ffmxb	maliang	ZJLX	maliang" + 
+				"eastic_ffmxb	maliang	ZJHM	maliang" + 
+				"eastic_ffmxb	maliang	LPPAH	maliang" + 
+				"eastic_ffmxb	maliang	DIS_USER	maliang" + 
+				"eastic_ffmxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_ffmxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_ffmxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_ffmxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_ffmxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_ffmxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_ffmxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_fzjgxxb	maliang	LSH	maliang" + 
+				"eastic_fzjgxxb	maliang	BXJGDM	maliang" + 
+				"eastic_fzjgxxb	maliang	BXJGMC	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGDM	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGZT	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGCLSJ	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGZJLX	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGZJHM	maliang" + 
+				"eastic_fzjgxxb	maliang	JGXQDM	maliang" + 
+				"eastic_fzjgxxb	maliang	GLJGDM	maliang" + 
+				"eastic_fzjgxxb	maliang	GLJGMC	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGMC	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGDZ	maliang" + 
+				"eastic_fzjgxxb	maliang	FZJGCJ	maliang" + 
+				"eastic_fzjgxxb	maliang	SJJGDM	maliang" + 
+				"eastic_fzjgxxb	maliang	JYBXYWXKZH	maliang" + 
+				"eastic_fzjgxxb	maliang	XKZFFRQ	maliang" + 
+				"eastic_fzjgxxb	maliang	XKZZXRQ	maliang" + 
+				"eastic_fzjgxxb	maliang	FZRDM	maliang" + 
+				"eastic_fzjgxxb	maliang	WFWGJL	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_USER	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_fzjgxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_grbdb	maliang	LSH	maliang" + 
+				"eastic_grbdb	maliang	BXJGDM	maliang" + 
+				"eastic_grbdb	maliang	BXJGMC	maliang" + 
+				"eastic_grbdb	maliang	TTBDH	maliang" + 
+				"eastic_grbdb	maliang	GRBDH	maliang" + 
+				"eastic_grbdb	maliang	BDTGXZ	maliang" + 
+				"eastic_grbdb	maliang	JTDBZ	maliang" + 
+				"eastic_grbdb	maliang	GLJGDM	maliang" + 
+				"eastic_grbdb	maliang	GLJGMC	maliang" + 
+				"eastic_grbdb	maliang	JGXQDM	maliang" + 
+				"eastic_grbdb	maliang	CBDQ	maliang" + 
+				"eastic_grbdb	maliang	XSQD	maliang" + 
+				"eastic_grbdb	maliang	DLJGBM	maliang" + 
+				"eastic_grbdb	maliang	DLJGMC	maliang" + 
+				"eastic_grbdb	maliang	TBRKHBH	maliang" + 
+				"eastic_grbdb	maliang	JFJG	maliang" + 
+				"eastic_grbdb	maliang	JFFS	maliang" + 
+				"eastic_grbdb	maliang	QDRQ	maliang" + 
+				"eastic_grbdb	maliang	HBDM	maliang" + 
+				"eastic_grbdb	maliang	BF	maliang" + 
+				"eastic_grbdb	maliang	BE	maliang" + 
+				"eastic_grbdb	maliang	LJBF	maliang" + 
+				"eastic_grbdb	maliang	JZRQ	maliang" + 
+				"eastic_grbdb	maliang	SQJFRQ	maliang" + 
+				"eastic_grbdb	maliang	BDSXRQ	maliang" + 
+				"eastic_grbdb	maliang	HBLX	maliang" + 
+				"eastic_grbdb	maliang	TBDSQRQ	maliang" + 
+				"eastic_grbdb	maliang	BDZT	maliang" + 
+				"eastic_grbdb	maliang	BDXS	maliang" + 
+				"eastic_grbdb	maliang	BDMQRQ	maliang" + 
+				"eastic_grbdb	maliang	BDZZRQ1	maliang" + 
+				"eastic_grbdb	maliang	BDZZRQ2	maliang" + 
+				"eastic_grbdb	maliang	BDXLHFRQ	maliang" + 
+				"eastic_grbdb	maliang	BDZZYY	maliang" + 
+				"eastic_grbdb	maliang	HLWBXYWBZ	maliang" + 
+				"eastic_grbdb	maliang	SMRZTGBZ	maliang" + 
+				"eastic_grbdb	maliang	SMRZFS	maliang" + 
+				"eastic_grbdb	maliang	FZCTBBZ	maliang" + 
+				"eastic_grbdb	maliang	FZCGFBZ	maliang" + 
+				"eastic_grbdb	maliang	JBYWBZ	maliang" + 
+				"eastic_grbdb	maliang	JBGLF	maliang" + 
+				"eastic_grbdb	maliang	YBGRZHGMBZ	maliang" + 
+				"eastic_grbdb	maliang	DIS_USER	maliang" + 
+				"eastic_grbdb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_grbdb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_grbdb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_grbdb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_grbdb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_grbdb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_grbdb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_grxzb	maliang	LSH	maliang" + 
+				"eastic_grxzb	maliang	BXJGDM	maliang" + 
+				"eastic_grxzb	maliang	BXJGMC	maliang" + 
+				"eastic_grxzb	maliang	TTBDH	maliang" + 
+				"eastic_grxzb	maliang	GRBDH	maliang" + 
+				"eastic_grxzb	maliang	BDTGXZ	maliang" + 
+				"eastic_grxzb	maliang	GDBXXZHM	maliang" + 
+				"eastic_grxzb	maliang	ZXBXXZHM	maliang" + 
+				"eastic_grxzb	maliang	ZFXXZ	maliang" + 
+				"eastic_grxzb	maliang	CPBM	maliang" + 
+				"eastic_grxzb	maliang	GLJGDM	maliang" + 
+				"eastic_grxzb	maliang	GLJGMC	maliang" + 
+				"eastic_grxzb	maliang	BXZRSXRQ	maliang" + 
+				"eastic_grxzb	maliang	SQJFRQ	maliang" + 
+				"eastic_grxzb	maliang	ZJRQ	maliang" + 
+				"eastic_grxzb	maliang	JZRQ	maliang" + 
+				"eastic_grxzb	maliang	BXZRZZRQ1	maliang" + 
+				"eastic_grxzb	maliang	JFJG	maliang" + 
+				"eastic_grxzb	maliang	JFQJLX	maliang" + 
+				"eastic_grxzb	maliang	JFNQ	maliang" + 
+				"eastic_grxzb	maliang	BXQJLX	maliang" + 
+				"eastic_grxzb	maliang	BXNQ	maliang" + 
+				"eastic_grxzb	maliang	FS	maliang" + 
+				"eastic_grxzb	maliang	DQBF	maliang" + 
+				"eastic_grxzb	maliang	LJBF	maliang" + 
+				"eastic_grxzb	maliang	JBBE	maliang" + 
+				"eastic_grxzb	maliang	FXBE	maliang" + 
+				"eastic_grxzb	maliang	BDXZZT	maliang" + 
+				"eastic_grxzb	maliang	BXZRZZRQ2	maliang" + 
+				"eastic_grxzb	maliang	BXZRXLHFRQ	maliang" + 
+				"eastic_grxzb	maliang	XZZZRQ	maliang" + 
+				"eastic_grxzb	maliang	DIS_USER	maliang" + 
+				"eastic_grxzb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_grxzb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_grxzb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_grxzb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_grxzb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_grxzb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_grxzb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_khbddzb	maliang	LSH	maliang" + 
+				"eastic_khbddzb	maliang	BXJGDM	maliang" + 
+				"eastic_khbddzb	maliang	BXJGMC	maliang" + 
+				"eastic_khbddzb	maliang	KHBH	maliang" + 
+				"eastic_khbddzb	maliang	KHLB	maliang" + 
+				"eastic_khbddzb	maliang	KHSX	maliang" + 
+				"eastic_khbddzb	maliang	TTBDH	maliang" + 
+				"eastic_khbddzb	maliang	GRBDH	maliang" + 
+				"eastic_khbddzb	maliang	BDTGXZ	maliang" + 
+				"eastic_khbddzb	maliang	BDZT	maliang" + 
+				"eastic_khbddzb	maliang	DIS_USER	maliang" + 
+				"eastic_khbddzb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_khbddzb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_khbddzb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_khbddzb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_khbddzb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_khbddzb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_khbddzb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_khhfb	maliang	LSH	maliang" + 
+				"eastic_khhfb	maliang	BXJGDM	maliang" + 
+				"eastic_khhfb	maliang	BXJGMC	maliang" + 
+				"eastic_khhfb	maliang	GRBDH	maliang" + 
+				"eastic_khhfb	maliang	HFSXH	maliang" + 
+				"eastic_khhfb	maliang	XSQD	maliang" + 
+				"eastic_khhfb	maliang	GLJGDM	maliang" + 
+				"eastic_khhfb	maliang	GLJGMC	maliang" + 
+				"eastic_khhfb	maliang	TBRKHBH	maliang" + 
+				"eastic_khhfb	maliang	HFLX	maliang" + 
+				"eastic_khhfb	maliang	HFDH	maliang" + 
+				"eastic_khhfb	maliang	TBDSQRQ	maliang" + 
+				"eastic_khhfb	maliang	QDRQ	maliang" + 
+				"eastic_khhfb	maliang	BDSXRQ	maliang" + 
+				"eastic_khhfb	maliang	BDHZKHQSRQ	maliang" + 
+				"eastic_khhfb	maliang	HFRQ	maliang" + 
+				"eastic_khhfb	maliang	YYQTS	maliang" + 
+				"eastic_khhfb	maliang	YYQJZRQ	maliang" + 
+				"eastic_khhfb	maliang	YYQNHFBZ	maliang" + 
+				"eastic_khhfb	maliang	HFCGBZ	maliang" + 
+				"eastic_khhfb	maliang	DIS_USER	maliang" + 
+				"eastic_khhfb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_khhfb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_khhfb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_khhfb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_khhfb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_khhfb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_khhfb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_lpbdmxb	maliang	LSH	maliang" + 
+				"eastic_lpbdmxb	maliang	BXJGDM	maliang" + 
+				"eastic_lpbdmxb	maliang	BXJGMC	maliang" + 
+				"eastic_lpbdmxb	maliang	PAH	maliang" + 
+				"eastic_lpbdmxb	maliang	LAH	maliang" + 
+				"eastic_lpbdmxb	maliang	BAH	maliang" + 
+				"eastic_lpbdmxb	maliang	TTBDH	maliang" + 
+				"eastic_lpbdmxb	maliang	BDTGXZ	maliang" + 
+				"eastic_lpbdmxb	maliang	GRBDH	maliang" + 
+				"eastic_lpbdmxb	maliang	GDBXXZHM	maliang" + 
+				"eastic_lpbdmxb	maliang	BARQ	maliang" + 
+				"eastic_lpbdmxb	maliang	LARQ	maliang" + 
+				"eastic_lpbdmxb	maliang	CXRQ	maliang" + 
+				"eastic_lpbdmxb	maliang	CXYYFL	maliang" + 
+				"eastic_lpbdmxb	maliang	PFZRLX	maliang" + 
+				"eastic_lpbdmxb	maliang	CPBM	maliang" + 
+				"eastic_lpbdmxb	maliang	HBDM	maliang" + 
+				"eastic_lpbdmxb	maliang	HSPFJE	maliang" + 
+				"eastic_lpbdmxb	maliang	JARQ	maliang" + 
+				"eastic_lpbdmxb	maliang	LPJL	maliang" + 
+				"eastic_lpbdmxb	maliang	HPJGDM	maliang" + 
+				"eastic_lpbdmxb	maliang	HPJGMC	maliang" + 
+				"eastic_lpbdmxb	maliang	PFJE	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_USER	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_lpbdmxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	LSH	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BXJGDM	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BXJGMC	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BXZTBM	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BXZTMC	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	FZJGDM	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	ZZKJKMBH	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	ZZKJKMMC	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	JZRQ	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	JZPZH	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	ZY	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	HBDM	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	JYBJF	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	JYBDF	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BWBJF	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BWBDF	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	QMJYBYE	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	QMBWBYE	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	BSZQ	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_USER	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_sxfjyjfkmmxzb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_ttbdb	maliang	LSH	maliang" + 
+				"eastic_ttbdb	maliang	BXJGDM	maliang" + 
+				"eastic_ttbdb	maliang	BXJGMC	maliang" + 
+				"eastic_ttbdb	maliang	TTBDH	maliang" + 
+				"eastic_ttbdb	maliang	TTBDTBDHM	maliang" + 
+				"eastic_ttbdb	maliang	KDBZ	maliang" + 
+				"eastic_ttbdb	maliang	WMDBZ	maliang" + 
+				"eastic_ttbdb	maliang	JTDBZ	maliang" + 
+				"eastic_ttbdb	maliang	GLJGDM	maliang" + 
+				"eastic_ttbdb	maliang	GLJGMC	maliang" + 
+				"eastic_ttbdb	maliang	JGXQDM	maliang" + 
+				"eastic_ttbdb	maliang	CBDQ	maliang" + 
+				"eastic_ttbdb	maliang	XSQD	maliang" + 
+				"eastic_ttbdb	maliang	DLJGBM	maliang" + 
+				"eastic_ttbdb	maliang	DLJGMC	maliang" + 
+				"eastic_ttbdb	maliang	TBRKHBH	maliang" + 
+				"eastic_ttbdb	maliang	JFFS	maliang" + 
+				"eastic_ttbdb	maliang	QDRQ	maliang" + 
+				"eastic_ttbdb	maliang	TBZRS	maliang" + 
+				"eastic_ttbdb	maliang	HBDM	maliang" + 
+				"eastic_ttbdb	maliang	BF	maliang" + 
+				"eastic_ttbdb	maliang	BE	maliang" + 
+				"eastic_ttbdb	maliang	LJBF	maliang" + 
+				"eastic_ttbdb	maliang	SQJFRQ	maliang" + 
+				"eastic_ttbdb	maliang	BDSXRQ	maliang" + 
+				"eastic_ttbdb	maliang	HBLX	maliang" + 
+				"eastic_ttbdb	maliang	TBDSQRQ	maliang" + 
+				"eastic_ttbdb	maliang	BDHZQSBZ	maliang" + 
+				"eastic_ttbdb	maliang	BDHZKHQSRQ	maliang" + 
+				"eastic_ttbdb	maliang	BDZT	maliang" + 
+				"eastic_ttbdb	maliang	BDXS	maliang" + 
+				"eastic_ttbdb	maliang	BDMQRQ	maliang" + 
+				"eastic_ttbdb	maliang	BDZZRQ1	maliang" + 
+				"eastic_ttbdb	maliang	BDZZRQ2	maliang" + 
+				"eastic_ttbdb	maliang	BDXLHFRQ	maliang" + 
+				"eastic_ttbdb	maliang	BDZZYY	maliang" + 
+				"eastic_ttbdb	maliang	HLWBXYWBZ	maliang" + 
+				"eastic_ttbdb	maliang	FZCTBBZ	maliang" + 
+				"eastic_ttbdb	maliang	FZCGFBZ	maliang" + 
+				"eastic_ttbdb	maliang	JBYWBZ	maliang" + 
+				"eastic_ttbdb	maliang	JBGLF	maliang" + 
+				"eastic_ttbdb	maliang	YBGRZHGMBZ	maliang" + 
+				"eastic_ttbdb	maliang	DIS_USER	maliang" + 
+				"eastic_ttbdb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_ttbdb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_ttbdb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_ttbdb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_ttbdb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_ttbdb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_ttbdb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_ttbfb	maliang	LSH	maliang" + 
+				"eastic_ttbfb	maliang	BXJGDM	maliang" + 
+				"eastic_ttbfb	maliang	BXJGMC	maliang" + 
+				"eastic_ttbfb	maliang	TTBDH	maliang" + 
+				"eastic_ttbfb	maliang	BFYWLX	maliang" + 
+				"eastic_ttbfb	maliang	JFXH	maliang" + 
+				"eastic_ttbfb	maliang	TTBDXZHM	maliang" + 
+				"eastic_ttbfb	maliang	CPBM	maliang" + 
+				"eastic_ttbfb	maliang	GLJGDM	maliang" + 
+				"eastic_ttbfb	maliang	GLJGMC	maliang" + 
+				"eastic_ttbfb	maliang	SJJE	maliang" + 
+				"eastic_ttbfb	maliang	DZRQ	maliang" + 
+				"eastic_ttbfb	maliang	QRRQ	maliang" + 
+				"eastic_ttbfb	maliang	KHYXMC	maliang" + 
+				"eastic_ttbfb	maliang	YXZH	maliang" + 
+				"eastic_ttbfb	maliang	YXZHMC	maliang" + 
+				"eastic_ttbfb	maliang	DIS_USER	maliang" + 
+				"eastic_ttbfb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_ttbfb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_ttbfb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_ttbfb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_ttbfb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_ttbfb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_ttbfb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_ttxzb	maliang	LSH	maliang" + 
+				"eastic_ttxzb	maliang	BXJGDM	maliang" + 
+				"eastic_ttxzb	maliang	BXJGMC	maliang" + 
+				"eastic_ttxzb	maliang	TTBDH	maliang" + 
+				"eastic_ttxzb	maliang	TTBDTBDHM	maliang" + 
+				"eastic_ttxzb	maliang	TTBDXZHM	maliang" + 
+				"eastic_ttxzb	maliang	ZXBXXZHM	maliang" + 
+				"eastic_ttxzb	maliang	ZFXXZ	maliang" + 
+				"eastic_ttxzb	maliang	CPBM	maliang" + 
+				"eastic_ttxzb	maliang	ZXCPBM	maliang" + 
+				"eastic_ttxzb	maliang	GLJGDM	maliang" + 
+				"eastic_ttxzb	maliang	GLJGMC	maliang" + 
+				"eastic_ttxzb	maliang	BXZRSXRQ	maliang" + 
+				"eastic_ttxzb	maliang	SQJFRQ	maliang" + 
+				"eastic_ttxzb	maliang	ZJRQ	maliang" + 
+				"eastic_ttxzb	maliang	JZRQ	maliang" + 
+				"eastic_ttxzb	maliang	BXZRZZRQ1	maliang" + 
+				"eastic_ttxzb	maliang	JFJG	maliang" + 
+				"eastic_ttxzb	maliang	JFQJLX	maliang" + 
+				"eastic_ttxzb	maliang	JFNQ	maliang" + 
+				"eastic_ttxzb	maliang	BXQJLX	maliang" + 
+				"eastic_ttxzb	maliang	BXNQ	maliang" + 
+				"eastic_ttxzb	maliang	FS	maliang" + 
+				"eastic_ttxzb	maliang	DQBF	maliang" + 
+				"eastic_ttxzb	maliang	LJBF	maliang" + 
+				"eastic_ttxzb	maliang	JBBE	maliang" + 
+				"eastic_ttxzb	maliang	HBWCRQ	maliang" + 
+				"eastic_ttxzb	maliang	BDXZZT	maliang" + 
+				"eastic_ttxzb	maliang	DIS_USER	maliang" + 
+				"eastic_ttxzb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_ttxzb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_ttxzb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_ttxzb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_ttxzb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_ttxzb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_ttxzb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_xsryxxb	maliang	LSH	maliang" + 
+				"eastic_xsryxxb	maliang	BXJGDM	maliang" + 
+				"eastic_xsryxxb	maliang	BXJGMC	maliang" + 
+				"eastic_xsryxxb	maliang	XSRYDM	maliang" + 
+				"eastic_xsryxxb	maliang	SSFZJGDM	maliang" + 
+				"eastic_xsryxxb	maliang	XSRYXM	maliang" + 
+				"eastic_xsryxxb	maliang	XL	maliang" + 
+				"eastic_xsryxxb	maliang	ZJLX	maliang" + 
+				"eastic_xsryxxb	maliang	ZJHM	maliang" + 
+				"eastic_xsryxxb	maliang	LXDH	maliang" + 
+				"eastic_xsryxxb	maliang	SSQDXX	maliang" + 
+				"eastic_xsryxxb	maliang	ZYZSH	maliang" + 
+				"eastic_xsryxxb	maliang	ZYZFFRQ	maliang" + 
+				"eastic_xsryxxb	maliang	ZYZZXDQRQ	maliang" + 
+				"eastic_xsryxxb	maliang	QYRQ	maliang" + 
+				"eastic_xsryxxb	maliang	JYRQ	maliang" + 
+				"eastic_xsryxxb	maliang	SJXSRYDM	maliang" + 
+				"eastic_xsryxxb	maliang	WGWJJL	maliang" + 
+				"eastic_xsryxxb	maliang	GWRZXX	maliang" + 
+				"eastic_xsryxxb	maliang	KHYXMC	maliang" + 
+				"eastic_xsryxxb	maliang	YXZH	maliang" + 
+				"eastic_xsryxxb	maliang	YXZHMC	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_USER	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_xsryxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_ygxxb	maliang	LSH	maliang" + 
+				"eastic_ygxxb	maliang	BXJGDM	maliang" + 
+				"eastic_ygxxb	maliang	BXJGMC	maliang" + 
+				"eastic_ygxxb	maliang	YGDM	maliang" + 
+				"eastic_ygxxb	maliang	SSFZJGDM	maliang" + 
+				"eastic_ygxxb	maliang	YGXM	maliang" + 
+				"eastic_ygxxb	maliang	XB	maliang" + 
+				"eastic_ygxxb	maliang	MZ	maliang" + 
+				"eastic_ygxxb	maliang	CSRQ	maliang" + 
+				"eastic_ygxxb	maliang	ZZMM	maliang" + 
+				"eastic_ygxxb	maliang	CJZDRQ	maliang" + 
+				"eastic_ygxxb	maliang	ZJLX	maliang" + 
+				"eastic_ygxxb	maliang	ZJHM	maliang" + 
+				"eastic_ygxxb	maliang	LXDH	maliang" + 
+				"eastic_ygxxb	maliang	XL	maliang" + 
+				"eastic_ygxxb	maliang	ZYJSZG	maliang" + 
+				"eastic_ygxxb	maliang	DJGBZ	maliang" + 
+				"eastic_ygxxb	maliang	GW	maliang" + 
+				"eastic_ygxxb	maliang	RSRQ	maliang" + 
+				"eastic_ygxxb	maliang	LSRQ	maliang" + 
+				"eastic_ygxxb	maliang	DIS_USER	maliang" + 
+				"eastic_ygxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_ygxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_ygxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_ygxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_ygxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_ygxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_ygxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_yhzhxxb	maliang	LSH	maliang" + 
+				"eastic_yhzhxxb	maliang	BXJGDM	maliang" + 
+				"eastic_yhzhxxb	maliang	BXJGMC	maliang" + 
+				"eastic_yhzhxxb	maliang	FZJGDM	maliang" + 
+				"eastic_yhzhxxb	maliang	YXMC	maliang" + 
+				"eastic_yhzhxxb	maliang	YXZH	maliang" + 
+				"eastic_yhzhxxb	maliang	YXZHMC	maliang" + 
+				"eastic_yhzhxxb	maliang	YXZHLX	maliang" + 
+				"eastic_yhzhxxb	maliang	YXZHZT	maliang" + 
+				"eastic_yhzhxxb	maliang	HBDM	maliang" + 
+				"eastic_yhzhxxb	maliang	KHRQ	maliang" + 
+				"eastic_yhzhxxb	maliang	XHRQ	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_USER	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_yhzhxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	LSH	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BXJGDM	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BXJGMC	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BXZTBM	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BXZTMC	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	FZJGDM	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	ZZKJKMBH	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	ZZKJKMMC	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	JZRQ	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	JZPZH	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	ZY	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	HBDM	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	JYBJF	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	JYBDF	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BWBJF	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BWBDF	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	QMJYBYE	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	QMBWBYE	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	BSZQ	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_USER	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_ywjglffkmmxzb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_zjjgxxb	maliang	LSH	maliang" + 
+				"eastic_zjjgxxb	maliang	BXJGDM	maliang" + 
+				"eastic_zjjgxxb	maliang	BXJGMC	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGDM	maliang" + 
+				"eastic_zjjgxxb	maliang	SSFZJGDM	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGMC	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGDZ	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGLB	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGTYBM	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGZJLX	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJJGZJHM	maliang" + 
+				"eastic_zjjgxxb	maliang	HDZJXKZRQ	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJXKZDQR	maliang" + 
+				"eastic_zjjgxxb	maliang	QYRQ	maliang" + 
+				"eastic_zjjgxxb	maliang	XYDQRHJYR	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJYWXKZH	maliang" + 
+				"eastic_zjjgxxb	maliang	ZJYWXKZMC	maliang" + 
+				"eastic_zjjgxxb	maliang	YWFW	maliang" + 
+				"eastic_zjjgxxb	maliang	JYQY	maliang" + 
+				"eastic_zjjgxxb	maliang	FZRXM	maliang" + 
+				"eastic_zjjgxxb	maliang	WFWGJL	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_USER	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_zjjgxxb	maliang	DIS_STEP_ID	maliang" + 
+				"eastic_zzkjqkmb	maliang	LSH	maliang" + 
+				"eastic_zzkjqkmb	maliang	BXJGDM	maliang" + 
+				"eastic_zzkjqkmb	maliang	BXJGMC	maliang" + 
+				"eastic_zzkjqkmb	maliang	KJRQ	maliang" + 
+				"eastic_zzkjqkmb	maliang	BXZTBM	maliang" + 
+				"eastic_zzkjqkmb	maliang	BXZTMC	maliang" + 
+				"eastic_zzkjqkmb	maliang	FZJGDM	maliang" + 
+				"eastic_zzkjqkmb	maliang	ZZKJKMBH	maliang" + 
+				"eastic_zzkjqkmb	maliang	ZZKJKMMC	maliang" + 
+				"eastic_zzkjqkmb	maliang	ZZKJKMJC	maliang" + 
+				"eastic_zzkjqkmb	maliang	KJKMLX	maliang" + 
+				"eastic_zzkjqkmb	maliang	QCJFYE	maliang" + 
+				"eastic_zzkjqkmb	maliang	QCDFYE	maliang" + 
+				"eastic_zzkjqkmb	maliang	BQJFFSE	maliang" + 
+				"eastic_zzkjqkmb	maliang	BQDFFSE	maliang" + 
+				"eastic_zzkjqkmb	maliang	QMJFYE	maliang" + 
+				"eastic_zzkjqkmb	maliang	QMDFYE	maliang" + 
+				"eastic_zzkjqkmb	maliang	HBDM	maliang" + 
+				"eastic_zzkjqkmb	maliang	BSZQ	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_USER	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_OPERATE_FLAG	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_DATA_FROM	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_EDIT_LOCK	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_VERIFY_STATUS	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_DATA_DATE	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_BANK_ID	maliang" + 
+				"eastic_zzkjqkmb	maliang	DIS_STEP_ID";
+		String[] arrtablecolumn=tablescloumns.split("maliang");
+		for(int i=0;i<arrtablecolumn.length;i++) {
+			arrtablecolumn[i]=arrtablecolumn[i].trim();
+		}
+		int a=1;
+		String columnsse="";
+		String columnsve="";
+		String deletesql="";
+		String biaojiegousql="";
+		for(int i=0;i<arrtablecolumn.length;i++) {
+			if((i+2)%2==0) {
+				columnsse=columnsse+arrtablecolumn[i+1]+",";
+				if(arrtablecolumn[i+1].equals("DIS_DATA_FROM")) {
+					columnsve=columnsve+"dis_step_id"+",";
+				}else if(arrtablecolumn[i+1].equals("LSH")){
+					columnsve=columnsve+"CONCAT( '000235', oldtime, LPAD(@rowid:=@rowid+1,10,0)) LSH,";
+				}else {
+					columnsve=columnsve+arrtablecolumn[i+1]+",";
+				}
+				if(i<arrtablecolumn.length-2) {
+					
+					if(!arrtablecolumn[i].equals(arrtablecolumn[i+2])) {
+						columnsve=columnsve.substring(0, columnsve.length()-1);
+						columnsse=columnsse.substring(0, columnsse.length()-1);
+						sql=sql+"insert into "+arrtablecolumn[i]+"("+columnsse+")"+" select "+columnsve+" from "+arrtablecolumn[i]+";\r\n";
+						columnsve="";
+						columnsse="";
+						deletesql=deletesql+"delete from "+arrtablecolumn[i]+" where DIS_STEP_ID = dis_tep_id;\r\n";
+						biaojiegousql=biaojiegousql+"mysqldump -u root -proot -d baosong "+arrtablecolumn[i].substring(7)+" > /home/maliang/桌面/1/"+arrtablecolumn[i].substring(7)+".sql\t\n";
+					}
+					
+					
+				}else {
+					columnsve=columnsve.substring(0, columnsve.length()-1);
+					columnsse=columnsse.substring(0, columnsse.length()-1);
+					sql=sql+"insert into "+arrtablecolumn[arrtablecolumn.length-2]+"("+columnsse+")"+" select "+columnsve+" from "+arrtablecolumn[arrtablecolumn.length-2]+";\r\n";
+					columnsve="";
+					deletesql=deletesql+"delete from "+arrtablecolumn[i]+" where DIS_STEP_ID = dis_tep_id;\r\n";
+					biaojiegousql=biaojiegousql+"mysqldump -u root -proot -d baosong "+arrtablecolumn[i].substring(7)+" > /home/maliang/桌面/1/"+arrtablecolumn[i].substring(7)+".sql\t\n";
+				}
+				
+				
+				
+			}
+			
+			
+		}
+		System.out.print(biaojiegousql);
+	}
+	
+	
+	public static void insert(){
 		String sql;
 		sql="";
 		String table_column="bbxrb	maliang	LSH	maliang" + 
@@ -1999,7 +2831,7 @@ public class insert {
 		}
 		String columns="";
 		String tables="";
-
+		String biaojiegou="";
 		for(int i=0;i<arr_table_column.length;i++) {
 			
 			for(int j=0;j<arr_eastic_table_column.length;j++) {
@@ -2029,6 +2861,7 @@ public class insert {
 							sql=sql+columns+") select "+columns+" from eastic_"+arr_table_column[i]+";\t\n";
 							columns="";
 						tables=tables+"delete from "+arr_table_column[i]+";\t\n";	
+						
 					}
 						
 				}
@@ -2040,7 +2873,7 @@ public class insert {
 							sql=sql+columns+") select "+columns+" from eastic_"+arr_table_column[i]+";\t\n";
 							columns="";
 							tables=tables+"delete from "+arr_table_column[i]+";\t\n";
-						
+							
 				}
 			}
 			
@@ -2048,8 +2881,60 @@ public class insert {
 			
 		}
 		System.out.println(sql);
-		
 	}
-	
-	
+
+	public static void bjg() {
+		String sql="";
+		String tablesname="bbxrbmaliang"
+				+ "bdtsxxbmaliang"
+				+ "bdxsryglbmaliang"
+				+ "bdyjxxbmaliang"
+				+ "bfmxbmaliang"
+				+ "cwpzxxbmaliang"
+				+ "cxrxxbmaliang"
+				+ "djglzxxbmaliang"
+				+ "ffmxbmaliang"
+				+ "fzjgxxbmaliang"
+				+ "glfxxbmaliang"
+				+ "gljyhzbmaliang"
+				+ "grbdbmaliang"
+				+ "grkhxxbmaliang"
+				+ "grxzbmaliang"
+				+ "jggqxxbmaliang"
+				+ "khbddzbmaliang"
+				+ "khhfbmaliang"
+				+ "lpbdmxbmaliang"
+				+ "nbkmdzbmaliang"
+				+ "njjhglqkbmaliang"
+				+ "njjhxxbmaliang"
+				+ "njjhyymxbmaliang"
+				+ "njtzqkbmaliang"
+				+ "sxfjyjfkmmxzbmaliang"
+				+ "ttbdbmaliang"
+				+ "ttbfbmaliang"
+				+ "ttkhxxbmaliang"
+				+ "ttxzbmaliang"
+				+ "wttzqkbmaliang"
+				+ "xsryxxbmaliang"
+				+ "xzdybmaliang"
+				+ "ygxxbmaliang"
+				+ "yhzhxxbmaliang"
+				+ "ylbzcpxxqkbmaliang"
+				+ "ylbzywxxbmaliang"
+				+ "ywjglffkmmxzbmaliang"
+				+ "zbcpxxbmaliang"
+				+ "zbhtxxbmaliang"
+				+ "zbzdxxbmaliang"
+				+ "zdgljybmaliang"
+				+ "zjjgxxbmaliang"
+				+ "zzkjqkmbmaliang"
+				+ "zztzjylsbmaliang"
+				+ "zztzzhccmxbmaliang"
+				+ "zztzzhxxhzb";
+		String[] arrtables=tablesname.split("maliang");
+		for(int i=0;i<arrtables.length;i++) {
+			sql=sql+"mysqldump -u root -proot -d baosong "+arrtables[i]+" > /home/maliang/桌面/1/"+arrtables[i]+".sql\r\n";
+		}
+		System.out.print(sql);
+	}
 }

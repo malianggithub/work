@@ -8,36 +8,35 @@ public class concat {
 	public static String updateconcat() {
 		String sql;
 		sql="";
-		String name="s_core_bbxrb," + 
-				"s_core_bbxrb_copy1," + 
-				"s_core_bdxsryglb," + 
-				"s_core_bfmxb," + 
-				"s_core_cxrxxb," + 
-				"s_core_ffmxb," + 
-				"s_core_grbdb," + 
-				"s_core_grbdb_copy1," + 
-				"s_core_grkhxxb," + 
-				"s_core_grkhxxb_copy," + 
-				"s_core_grxzb," + 
-				"s_core_khbddzb," + 
-				"s_core_khhfb," + 
-				"s_core_lpbdmxb," + 
-				"s_core_ttbdb," + 
-				"s_core_ttbfb," + 
-				"s_core_ttkhxxb," + 
-				"s_core_ttxzb," + 
-				"s_fin_cwpzxxb," + 
-				"s_fin_nbkmdzb," + 
-				"s_fin_sxfjyjfkmmxzb," + 
-				"s_fin_ywjglffkmmxzb," + 
-				"s_fin_zzkjqkmb," + 
-				"s_inv_wttzqkb," + 
-				"s_inv_zztzjylsb," + 
-				"s_inv_zztzzhccmxb," + 
-				"s_inv_zztzzhxxhzb";
-		String[] tablename=name.toLowerCase().split(",");
+		String name="s_core_bbxrbmaliang" + 
+				"s_core_bdxsryglbmaliang" + 
+				"s_core_bfmxbmaliang" + 
+				"s_core_cxrxxbmaliang" + 
+				"s_core_ffmxbmaliang" + 
+				"s_core_grbdbmaliang" + 
+				"s_core_grkhxxbmaliang" + 
+				"s_core_grxzbmaliang" + 
+				"s_core_khbddzbmaliang" + 
+				"s_core_khhfbmaliang" + 
+				"s_core_lpbdmxbmaliang" + 
+				"s_core_ttbdbmaliang" + 
+				"s_core_ttbfbmaliang" + 
+				"s_core_ttkhxxbmaliang" + 
+				"s_core_ttxzbmaliang" + 
+				"s_fin_cwpzxxbmaliang" + 
+				"s_fin_nbkmdzbmaliang" + 
+				"s_fin_sxfjyjfkmmxzbmaliang" + 
+				"s_fin_ywjglffkmmxzbmaliang" + 
+				"s_fin_zzkjqkmbmaliang" + 
+				"s_inv_wttzqkbmaliang" + 
+				"s_inv_zztzjylsbmaliang" + 
+				"s_inv_zztzzhccmxbmaliang" + 
+				"s_inv_zztzzhxxhzbmaliang" + 
+				"s_sales_xsryxxbmaliang" + 
+				"s_sales_zjjgxxb";
+		String[] tablename=name.toLowerCase().split("maliang");
 		for(int i=0;i<tablename.length;i++) {
-			sql=sql+"delete from "+tablename[i]+";\r\n";
+			sql=sql+"update "+tablename[i]+" set DIS_DATA_DATE = LAST_DAY(CURDATE()) WHERE DIS_DATA_DATE IS NULL;\r\n";
 		}
 		System.out.print(sql);
 		return sql;
