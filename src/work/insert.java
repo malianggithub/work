@@ -3,13 +3,34 @@ package work;
 public class insert {
 	
 	public static void main(String[] args) {
-		bjg();
+		sjcf_delete_insert();
 		
 		
 	}
 	public static void sjcf_delete_insert() {
 
 		String sql="";
+		String coretable="EASTIC_GRKHXXBmaliang"
+				+ "EASTIC_TTKHXXBmaliang"
+				+ "EASTIC_KHBDDZBmaliang"
+				+ "EASTIC_GRBDBmaliang"
+				+ "EASTIC_GRXZBmaliang"
+				+ "EASTIC_BBXRBmaliang"
+				+ "EASTIC_TTBDBmaliang"
+				+ "EASTIC_TTXZBmaliang"
+				+ "EASTIC_KHHFBmaliang"
+				+ "EASTIC_BDXSRYGLBmaliang"
+				+ "EASTIC_BFMXBmaliang"
+				+ "EASTIC_FFMXBmaliang"
+				+ "EASTIC_TTBFBmaliang"
+				+ "EASTIC_CXRXXBmaliang"
+				+ "EASTIC_LPBDMXB";
+		String[] arrtable=coretable.toLowerCase().split("maliang");
+		for(int i=0;i<arrtable.length;i++) {
+			sql=sql+"select distinct dis_data_date from  "+arrtable[i]+" union all\r\n";
+		}
+		System.out.print(sql);
+		sql="";
 		String tablesname="eastic_bbxrbmaliang" + 
 				"eastic_bdtsxxbmaliang" + 
 				"eastic_bdxsryglbmaliang" + 
@@ -56,11 +77,11 @@ public class insert {
 				"eastic_zztzjylsbmaliang" + 
 				"eastic_zztzzhccmxbmaliang" + 
 				"eastic_zztzzhxxhzb";
-		String[] arrtable=tablesname.split("maliang");
-		for(int i=0;i<arrtable.length;i++) {
-			sql=sql+"delete from "+arrtable[i]+" where DIS_STEP_ID = 'ETL_SJCF';\r\n";
+		String[] arrtable1=tablesname.split("maliang");
+		for(int i=0;i<arrtable1.length;i++) {
+			sql=sql+"select distinct dis_data_date from  "+arrtable1[i]+" union all\r\n";
 		}
-		System.out.print(sql);
+		//System.out.print(sql);
 	}
 	
 	public static void sjcf_insert() {

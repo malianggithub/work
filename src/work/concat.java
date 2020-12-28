@@ -36,7 +36,7 @@ public class concat {
 				"s_sales_zjjgxxb";
 		String[] tablename=name.toLowerCase().split("maliang");
 		for(int i=0;i<tablename.length;i++) {
-			sql=sql+"update "+tablename[i]+" set DIS_DATA_DATE = LAST_DAY(CURDATE()) WHERE DIS_DATA_DATE IS NULL;\r\n";
+			sql=sql+"select distinct dis_data_date from  "+tablename[i]+" union\r\n";
 		}
 		System.out.print(sql);
 		return sql;
@@ -45,24 +45,11 @@ public class concat {
 		String sql;
 		sql="";
 		String name="ZZKJQKMB,NBKMDZB,CWPZXXB,YWJGLFFKMMXZB,SXFJYJFKMMXZB";
-		String zw="×ÜÕË»á¼ÆÈ«¿ÆÄ¿±í,ÄÚ²¿¿ÆÄ¿¶ÔÕÕ±í,²ÆÎñÆ¾Ö¤ÐÅÏ¢±í,ÒµÎñ¼°¹ÜÀí·Ñ·Ö¿ÆÄ¿Ã÷Ï¸ÕË±í,ÊÖÐø·Ñ¼°Ó¶½ð·Ö¿ÆÄ¿Ã÷Ï¸ÕË±í,";
+		String zw="ï¿½ï¿½ï¿½Ë»ï¿½ï¿½È«ï¿½ï¿½Ä¿ï¿½ï¿½,ï¿½Ú²ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Õ±ï¿½,ï¿½ï¿½ï¿½ï¿½Æ¾Ö¤ï¿½ï¿½Ï¢ï¿½ï¿½,Òµï¿½ñ¼°¹ï¿½ï¿½ï¿½Ñ·Ö¿ï¿½Ä¿ï¿½ï¿½Ï¸ï¿½Ë±ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼ï¿½Ó¶ï¿½ï¿½Ö¿ï¿½Ä¿ï¿½ï¿½Ï¸ï¿½Ë±ï¿½,";
 		String[] tablename=name.toLowerCase().split(",");
 		String[] tablenamez=zw.split(",") ;
 		for(int i=0;i<tablename.length;i++) {
-			sql=sql+"drop TRIGGER if exists `"+tablenamez[i]+"Á÷Ë®ºÅÐÞ¸Ä`;," + 
-					"CREATE  TRIGGER `"+tablenamez[i]+"Á÷Ë®ºÅÐÞ¸Ä` BEFORE INSERT ON eastic_"+tablename[i]+" FOR EACH ," + 
-					"ROW," + 
-					"BEGIN," + 
-					"	DECLARE maxlsh VARCHAR(50);," + 
-					"	DECLARE oldtime varchar(10);," + 
-					"	set oldtime=CAST(DATE_FORMAT(LAST_DAY(DATE_SUB(CURDATE(), INTERVAL 1 MONTH)),'%Y%m%d') AS CHAR);," + 
-					"	SELECT IFNULL(MAX(CAST(SUBSTR(LSH,15,10) AS UNSIGNED)),0)," + 
-					"	into  maxlsh," + 
-					"	from eastic_"+tablename[i]+"," + 
-					"	where SUBSTR(LSH,7,8)=oldtime;," + 
-					"	SET maxlsh=CONCAT('000235',oldtime,LPAD(IFNULL(maxlsh+1,1),10,0));," + 
-					"	SET NEW.LSH=maxlsh;," + 
-					"END;,";
+			sql=sql+"select distinct dis_data_date from ";
 		}
 		System.out.print(sql);
 		return sql;
