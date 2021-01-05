@@ -25,9 +25,9 @@ public class insert {
 				+ "EASTIC_TTBFBmaliang"
 				+ "EASTIC_CXRXXBmaliang"
 				+ "EASTIC_LPBDMXB";
-		String[] arrtable=coretable.toLowerCase().split("maliang");
+		String[] arrtable=coretable.split("maliang");
 		for(int i=0;i<arrtable.length;i++) {
-			sql=sql+"select distinct dis_data_date from  "+arrtable[i]+" union all\r\n";
+			sql=sql+"SELECT DISTINCT '"+arrtable[i].substring(7)+"',RULE_IMP_ID,ERROR_INFO,COLUMN_ID FROM DIS_VERIFY_INFO WHERE TEMPLATE_ID LIKE '%"+arrtable[i].substring(7)+"' UNION ALL\r\n";
 		}
 		System.out.print(sql);
 		sql="";
@@ -814,9 +814,11 @@ public class insert {
 		String columnsve="";
 		String deletesql="";
 		String biaojiegousql="";
+		String ziduan="";
 		for(int i=0;i<arrtablecolumn.length;i++) {
 			if((i+2)%2==0) {
 				columnsse=columnsse+arrtablecolumn[i+1]+",";
+				
 				if(arrtablecolumn[i+1].equals("DIS_DATA_FROM")) {
 					columnsve=columnsve+"dis_step_id"+",";
 				}else if(arrtablecolumn[i+1].equals("LSH")){
@@ -825,7 +827,7 @@ public class insert {
 					columnsve=columnsve+arrtablecolumn[i+1]+",";
 				}
 				if(i<arrtablecolumn.length-2) {
-					
+					ziduan=ziduan+"select distinct "+arrtablecolumn[i+1]+",'"+arrtablecolumn[i]+"' from "+ arrtablecolumn[i]+" where "+arrtablecolumn[i+1]+" = '码值无对应' union all\t\n";
 					if(!arrtablecolumn[i].equals(arrtablecolumn[i+2])) {
 						columnsve=columnsve.substring(0, columnsve.length()-1);
 						columnsse=columnsse.substring(0, columnsse.length()-1);
@@ -834,6 +836,7 @@ public class insert {
 						columnsse="";
 						deletesql=deletesql+"delete from "+arrtablecolumn[i]+" where DIS_STEP_ID = dis_tep_id;\r\n";
 						biaojiegousql=biaojiegousql+"mysqldump -u root -proot -d baosong "+arrtablecolumn[i].substring(7)+" > /home/maliang/桌面/1/"+arrtablecolumn[i].substring(7)+".sql\t\n";
+						
 					}
 					
 					
@@ -844,6 +847,7 @@ public class insert {
 					columnsve="";
 					deletesql=deletesql+"delete from "+arrtablecolumn[i]+" where DIS_STEP_ID = dis_tep_id;\r\n";
 					biaojiegousql=biaojiegousql+"mysqldump -u root -proot -d baosong "+arrtablecolumn[i].substring(7)+" > /home/maliang/桌面/1/"+arrtablecolumn[i].substring(7)+".sql\t\n";
+					ziduan=ziduan+"select distinct "+arrtablecolumn[i+1]+",'"+arrtablecolumn[i]+"' from "+ arrtablecolumn[i]+" where "+arrtablecolumn[i+1]+" = '码值无对应' \t\n";
 				}
 				
 				
@@ -852,7 +856,7 @@ public class insert {
 			
 			
 		}
-		System.out.print(biaojiegousql);
+		System.out.print(ziduan);
 	}
 	
 	
@@ -2853,6 +2857,7 @@ public class insert {
 		String columns="";
 		String tables="";
 		String biaojiegou="";
+		
 		for(int i=0;i<arr_table_column.length;i++) {
 			
 			for(int j=0;j<arr_eastic_table_column.length;j++) {
@@ -2863,7 +2868,7 @@ public class insert {
 
 							if(arr_table_column[i+1].equals(arr_eastic_table_column[j+1])) {
 								columns=columns+arr_table_column[i+1]+",";
-
+								
 							}
 						}
 					}
@@ -2901,7 +2906,7 @@ public class insert {
 			
 			
 		}
-		System.out.println(sql);
+		System.out.println(tables);
 	}
 
 	public static void bjg() {
@@ -2954,7 +2959,7 @@ public class insert {
 				+ "zztzzhxxhzb";
 		String[] arrtables=tablesname.split("maliang");
 		for(int i=0;i<arrtables.length;i++) {
-			sql=sql+"mysqldump -u root -proot -d baosong "+arrtables[i]+" > /home/maliang/桌面/1/"+arrtables[i]+".sql\r\n";
+			sql=sql+"select distinct DIS_DATA_DATE,'eastic_"+arrtables[i]+"' FROM eastic_"+arrtables[i]+" UNION ALL\r\n";
 		}
 		System.out.print(sql);
 	}

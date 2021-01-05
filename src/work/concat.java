@@ -36,7 +36,7 @@ public class concat {
 				"s_sales_zjjgxxb";
 		String[] tablename=name.toLowerCase().split("maliang");
 		for(int i=0;i<tablename.length;i++) {
-			sql=sql+"select distinct dis_data_date from  "+tablename[i]+" union\r\n";
+			sql=sql+"DELETE from  "+tablename[i]+" WHERE DIS_DATA_DATE='2020-12-29'\r\n";
 		}
 		System.out.print(sql);
 		return sql;
