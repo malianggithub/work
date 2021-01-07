@@ -22,7 +22,7 @@ public class sjcf {
 				+ "TTBFBmaliang"
 				+ "CXRXXBmaliang"
 				+ "LPBDMXB";
-		//cfnum(sjcf);
+		cfnum(sjcf);
 		
 		String ruihua="EASTIC_YWXTCPBMmaliang"
 				+ "EASTIC_YWXTCPBMmaliang"
@@ -90,7 +90,7 @@ public class sjcf {
 				+ "V0400000maliang"
 				+ "V0500000maliang"
 				+ "V9900000";
-		insert(ruihua,rui);
+		//insert(ruihua,rui);
 	}
 	public static void cfnum(String tables) {
 		String sql="";

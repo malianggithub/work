@@ -43,24 +43,21 @@ SELECT a.AppntNo AS KHBH,
 	   -- 地址所在地市
        IFNULL(b.County,'000000') AS DZSZQX,
 	   -- 地址所在区县
-        IFNULL(b.PostalAddress,'000000') AS JD,
-	   -- 街道
-'${data_date}' DIS_DATA_DATE
+        IFNULL(b.PostalAddress,'000000') AS JD
 FROM LCAppnt a,LCAddress b
 WHERE a.AppntNo = b.CustomerNo AND a.GrpContNo = '00000000000000000000'
   AND a.AddressNo = b.AddressNo
-  -- AND a.MakeDate < '2021-01-01'
-  -- AND b.MakeDate < '2021-01-01'
-  /*20210107取消a和b表的makedate*/
+ -- AND a.MakeDate < '2021-01-01'
+ -- AND b.MakeDate < '2021-01-01'
   AND a.contno =(SELECT
 		max(contno)
 	FROM
-		lccont
+		lcappnt
 	WHERE
-		contno = a.contno
-	AND signdate < '2021-01-01'  /* 20210101  将a.makedate改为makedate */
-	  /*20210107 从lccnot表，不从lcappnt表中取数*/
+		appntno = a.AppntNo
+	-- AND a.makedate < '2021-01-01'
 )
+and a.contno in (select contno from lccont cont where cont.signdate < '2021-01-01')
 -- 20201224 增加
 AND NOT EXISTS (
 	SELECT
@@ -69,7 +66,6 @@ AND NOT EXISTS (
 		lcinsured
 	WHERE
 		insuredno = a.appntno
-		and makedate<'2021-01-01'  /* 20210102  增加判断，排除掉集中报送的数据 */
 )
 -- 20201224 增加
 UNION
@@ -117,9 +113,7 @@ SELECT a.InsuredNo AS KHBH,
 	   -- 地址所在地市
        IFNULL(b.County,'000000') AS DZSZQX,
 	   -- 地址所在区县
-       IFNULL(b.PostalAddress,'000000') AS JD,
-	   -- 街道
-'${data_date}' DIS_DATA_DATE
+       IFNULL(b.PostalAddress,'000000') AS JD
 FROM LCInsured a,LCAddress b
 WHERE a.InsuredNo = b.CustomerNo AND a.GrpContNo = '00000000000000000000'
   AND a.AddressNo = b.AddressNo
@@ -129,10 +123,10 @@ WHERE a.InsuredNo = b.CustomerNo AND a.GrpContNo = '00000000000000000000'
 	SELECT
 		max(contno)
 	FROM
-		lccont
+		lcinsured
 	WHERE
-		contno = a.contno
-	AND signdate < '2021-01-01'  /* 20210101  将a.makedate改为makedate 
-	*/	
+		insuredno = a.InsuredNo
+	-- AND a.makedate < '2021-01-01'
 )
+and a.contno in (select contno from lccont cont where cont.signdate < '2021-01-01')
 -- 20201224 增加
